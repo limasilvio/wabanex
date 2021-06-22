@@ -1,5 +1,9 @@
 # Wabanex
 
+Projeto desenvolvido durante o [NLW/Together] rocketseat.
+
+Junho de 2021.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
