@@ -11,8 +11,15 @@ defmodule WabanexWeb.Router do
     get "/", IMCController, :index
   end
 
+  scope "/api" do
+    pipe_through :api
+
+    forward "/graphql", Absinthe.Plug, schema: WabanexWeb.Schema
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: WabanexWeb.Schema
+  end
+
   # Enables LiveDashboard only for development
-  #
+  #re
   # If you want to use the LiveDashboard in production, you should put
   # it behind authentication and allow only admins to access it.
   # If your application does not have an admins-only section yet,
